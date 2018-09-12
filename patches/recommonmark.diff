@@ -1,0 +1,11 @@
+--- dist.orig/recommonmark/transform.py	2018-09-12 17:20:39.972333967 +0800
++++ dist/recommonmark/transform.py	2018-09-12 17:38:11.760777711 +0800
+@@ -172,7 +172,7 @@
+             self.state_machine.reset(self.document,
+                                      node.parent,
+                                      self.current_level)
+-            return self.state_machine.run_role('doc', content=content)
++            return self.state_machine.run_role('any', content=content)
+         else:
+             # inplace modify uri
+             node['refuri'] = uri
